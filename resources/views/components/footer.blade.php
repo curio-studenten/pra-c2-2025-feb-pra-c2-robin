@@ -1,10 +1,29 @@
 
 <footer>
+    <div class="footer-wrap">
+        <div class="over-ons">
+            <h5>Over Ons</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi repellat aperiam maiores eaque eos, repellendus ratione officia
+                tempora odio quod ducimus laboriosam, ipsam reprehenderit! Mollitia nam nemo commodi vitae ducimus.</p>
+        </div>
+        <div class="contact">
+            <h5>Contact</h5>
+            <p>Neem contact met ons. </p>
+            <p>Telefoonnummer: 06 12345678</p>
+            <p>Email adres: test@test.com</p>
+        </div>
+        <div class="socials">
+            <h5>Socials</h5>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </div>
 	© {{ __('misc.copyright') }}
 </footer>
 
 
-<!-- analytics code -->              
+<!-- analytics code -->
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -19,10 +38,10 @@
 </script>
 <!-- Einde analytics code -->
 
-<script language="Javascript" type="text/javascript"> 
- 
- if (top.location!= self.location) { 
+<script language="Javascript" type="text/javascript">
+
+ if (top.location!= self.location) {
   top.location = self.location.href
- } 
- 
+ }
+
 </script>
