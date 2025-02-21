@@ -9,8 +9,8 @@
         <div class="contact">
             <h5>Contact</h5>
             <p>Neem contact met ons. </p>
-            <p>Telefoonnummer: 06 48819040</p>
-            <p>Email adres: abdirahman@gmail.com</p>
+            <p>Telefoonnummer: 06 12345678</p>
+            <p>Email adres: test@test.com</p>
         </div>
         <div class="socials">
             <h5>Socials</h5>
