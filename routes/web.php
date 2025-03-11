@@ -24,7 +24,7 @@ Manual:			/52/AEG/53/Superdeluxe/8023/manual/
 If we want to add product categories later:
 Productcat:		/category/12/Computers/
 */
-
+use Illuminate\Support\Collection;
 use App\Models\Brand;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\BrandController;
@@ -38,8 +38,13 @@ use App\Http\Controllers\LocaleController;
 Route::get('/', function () {
     $brands = Brand::all()->sortBy('name');
     $name = "Abdi";
-    return view('pages.homepage', compact('brands'), ["name"=>$name]);
+    $popularManuals = Brand::all()->sortBy('views');
+    return view('pages.homepage', compact('brands'), ["name"=> $name], ['popularManuals' => $popularManuals]);
 })->name('home');
+
+Route::get('/generateSitemap/', [SitemapController::class, 'generate']);
+
+Route::get('/manual/{id}/click', [ManualController::class, 'trackClick'])->name('manual.trackClick');
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
 Route::get('/manual/{language}/{brand_slug}/brand.html', [RedirectController::class, 'brand']);
