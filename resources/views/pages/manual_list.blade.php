@@ -16,15 +16,14 @@
 
     <div class="wrap">
         @foreach ($manuals as $manual)
-            @if ($manual->locally_available)
-                <a href="{{route('manual.trackClick', $manual->id)}}" alt="{{ $manual->name }}" title="{{ $manual->name }}"
-                    class="manual-a">{{ $manual->name }}</a>
-                ({{$manual->filesize_human_readable}})
-            @else
-                <a href="{{ route('manual.trackClick', $manual->id) }}" target="new" alt="{{ $manual->name }}"
-                    title="{{ $manual->name }}" class="manual-a">{{ $manual->name }}</a>
-            @endif
-            <br />
+        @if ($manual->locally_available)
+        <a href="{{route('manual.trackClick', $manual->id)}}" alt="{{ $manual->name }}" title="{{ $manual->name }}" class="manual-a">{{ $manual->name }}</a>
+        ({{$manual->filesize_human_readable}})
+        @else
+        <a href="{{ route('manual.trackClick' , $manual->id) }}" target="new" alt="{{ $manual->name }}" title="{{ $manual->name }}" class="manual-a">{{ $manual->name }}</a>
+        @endif
+
+        <!-- <br /> -->
         @endforeach
     </div>
 
