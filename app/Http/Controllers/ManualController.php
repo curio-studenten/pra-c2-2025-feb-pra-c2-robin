@@ -18,4 +18,8 @@ class ManualController extends Controller
             "brand" => $brand,
         ]);
     }
+    public function contact() {
+        return view('pages.contactformulier');
+    }
+
 }

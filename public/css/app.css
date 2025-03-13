@@ -9946,6 +9946,15 @@ a.text-dark:hover, a.text-dark:focus {
     visibility: hidden !important;
 }
 
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 15px;
+}
+
+
 @media print {
     *,
     *::before,

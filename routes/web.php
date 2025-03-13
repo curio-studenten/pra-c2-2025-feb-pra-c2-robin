@@ -31,6 +31,7 @@ use App\Http\Controllers\BrandController;
 use App\Http\Controllers\TypeController;
 use App\Http\Controllers\ManualController;
 use App\Http\Controllers\ProductCategoryController;
+use App\Http\Controllers\ContactFormulierController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocaleController;
 
@@ -42,7 +43,7 @@ Route::get('/', function () {
     return view('pages.homepage', compact('brands'), ["name"=> $name], ['popularManuals' => $popularManuals]);
 })->name('home');
 
-Route::get('/generateSitemap/', [SitemapController::class, 'generate']);
+Route::get('/generateSitemap', [SitemapController::class, 'generate']);
 
 Route::get('/manual/{id}/click', [ManualController::class, 'trackClick'])->name('manual.trackClick');
 
@@ -59,6 +60,9 @@ Route::get('/{brand_id}/{brand_slug}/', [BrandController::class, 'show']);
 
 // Detail page for a manual
 Route::get('/{brand_id}/{brand_slug}/{manual_id}/', [ManualController::class, 'show']);
+
+// Contact Formulier
+Route::get('/contactformulier', [ContactFormulierController::class, 'contact'])->name('contact.form');
 
 // Generate sitemaps
 Route::get('/generateSitemap/', [SitemapController::class, 'generate']);
