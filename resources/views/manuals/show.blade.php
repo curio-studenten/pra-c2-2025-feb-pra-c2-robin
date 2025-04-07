@@ -1,13 +1,13 @@
-<div class="manual-details">
-    <h1>{{ $manual->title }}</h1>
-    <p>{{ $manual->description }}</p>
+<x-layouts.app>
 
-    <!-- Display the number of views -->
-    <p>Views: {{ $manual->views }}</p>
-</div>
-@foreach($manuals as $manual)
-    <div class="manual-item">
-        <h3><a href="{{ route('manuals.show', $manual->id) }}">{{ $manual->title }}</a></h3>
-        <p>Views: {{ $manual->views }}</p>
-    </div>
-@endforeach
+
+    <h1>Alle merken met: {{ $letter }}</h1>
+    <ul>
+        @foreach($brands as $brand)
+            <li>
+                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">{{ $brand->name }}</a>
+            </li>
+        @endforeach
+    </ul>
+
+</x-layouts.app>
