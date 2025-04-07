@@ -43,6 +43,7 @@ Route::get('/', function () {
     return view('pages.homepage', compact('brands'), ["name"=> $name], ['popularManuals' => $popularManuals]);
 })->name('home');
 
+
 Route::get('/generateSitemap', [SitemapController::class, 'generate']);
 
 Route::get('/manual/{id}/click', [ManualController::class, 'trackClick'])->name('manual.trackClick');
