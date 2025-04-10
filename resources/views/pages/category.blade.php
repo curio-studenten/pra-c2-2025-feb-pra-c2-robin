@@ -5,5 +5,5 @@
             <ul><a href="{{route('home', $category->id)}}">{{$category->name}}</a></ul>
         @endforeach
     </li>
-    
+
 </x-layouts.app>
