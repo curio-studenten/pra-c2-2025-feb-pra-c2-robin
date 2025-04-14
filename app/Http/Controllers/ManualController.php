@@ -34,7 +34,7 @@ class ManualController extends Controller
         $manual = Manual::findOrFail($manual_id);
 
         // Increment the click count
-        $manual->increment('teller') += 1;
+        $manual->increment('teller');
 
         $manual->save();
 

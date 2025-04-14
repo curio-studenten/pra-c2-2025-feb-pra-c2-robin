@@ -21,6 +21,20 @@
 
     <div class="container">
         <!-- Example row of columns -->
+            <div class="list-link">
+                <?php 
+                    $list_id = 'list'
+                ?>
+                <h1>Alle merken</h1>
+                    <p>Ga naar letter:</p>
+                        <div><?php foreach (range('A', 'Z') as $letter):?>
+                            <a href="/brands/<?= $letter ?>"><?= $letter ?></a>-
+                            <?php endforeach; ?>
+                        </div>
+            </div>
+
+
+
         <div class="row">
 
             @foreach($brands->chunk($chunk_size) as $chunk)
